@@ -16,7 +16,7 @@ const ListAddress = () => {
   const deleteaddress = async (addressId) => {
     try {
       const res = await axios.delete(
-        `https://location-task.onrender.com//api/user/address/delete`,
+        `https://location-task.onrender.com/api/user/address/delete`,
         {
           headers: { token }, // Include the user's token for authentication
           data: { addressId }, // Pass addressId in the data property
@@ -42,7 +42,7 @@ const ListAddress = () => {
     const fetchAddresses = async () => {
       try {
         const res = await axios.post(
-          "https://location-task.onrender.com//api/user/address/list",
+          "https://location-task.onrender.com/api/user/address/list",
           {},
           {
             headers: { token }, // Include the user's token for authentication
