@@ -24,7 +24,7 @@ const AddressPage = () => {
         displayAddress: state.address, // Display address from state
       };
 
-      const res = await axios.post("http://localhost:4001/api/user/address/save", payload, {
+      const res = await axios.post("https://location-task.onrender.com//api/user/address/save", payload, {
         headers: { token }, // Include the user's token for authentication
       });
 
