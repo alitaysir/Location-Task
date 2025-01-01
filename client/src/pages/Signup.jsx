@@ -16,7 +16,7 @@ const Signup = () => {
 
     if (state === "SignUp") {
         try {
-          const res = await axios.post("http://localhost:4001/api/user/register", { name, email, password });
+          const res = await axios.post("https://location-task.onrender.com//api/user/register", { name, email, password });
           if (res.data.success) {
             setuser(res.data.user.name);
             localStorage.setItem('token',res.data.token)
