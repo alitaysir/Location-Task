@@ -32,7 +32,7 @@ export const AppProvider = ({ children }) => {
 
   const fetchAddresses = async () => {
     try {
-      const res = await axios.post("http://localhost:4001/api/user/address/list", {}, {
+      const res = await axios.post("https://location-task.onrender.com/api/user/address/list", {}, {
         headers: { token },
       });
       if (res.data.success) {
@@ -45,7 +45,7 @@ export const AppProvider = ({ children }) => {
   
   const saveAddress = async (address) => {
     try {
-      const res = await axios.post("http://localhost:4001/api/user/address/save", address, {
+      const res = await axios.post("https://location-task.onrender.com/api/user/address/save", address, {
         headers: { token },
       });
       if (res.data.success) {
